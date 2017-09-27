@@ -176,7 +176,8 @@ static int luv_recv_buffer_size(lua_State* L) {
   }
   ret = uv_recv_buffer_size(handle, &value);
   if (ret < 0) return luv_error(L, ret);
-  lua_pushinteger(L, ret);
+  //lua_pushinteger(L, ret);
+  lua_pushinteger(L, value);
   return 1;
 }
 
